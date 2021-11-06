@@ -9,7 +9,6 @@ fs.readdir(pathFolder, { withFileTypes: true }, (err, files) => {
   }
 
   files.forEach((el) => {
-    console.log(el)
     if (el.isFile()) {
       let parse = path.parse(`${pathFolder}/${el.name}`);
     
@@ -21,7 +20,7 @@ fs.readdir(pathFolder, { withFileTypes: true }, (err, files) => {
           throw err;
         }
         let sizeFile = stats.size;
-        console.log(`${nameFile} - ${extensionFile} - ${sizeFile} B`);
+        console.log(`${nameFile} - ${extensionFile} - ${sizeFile} b`);
       });
 
     }

@@ -15,7 +15,7 @@ fs.open(filePath, 'w', err => {
 });
 
   stdin.on('data', (data) => {
-    if(data.toString().trim() === 'exit') {
+    if(data.toString().trim().toLowerCase() === 'exit') {
       stdout.write('Good luck');
       process.exit();
     }
