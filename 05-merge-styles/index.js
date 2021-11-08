@@ -1,6 +1,5 @@
 const path = require('path');
 const fs = require('fs');
-const buffer = require('buffer');
 
 const styleFolderPath = path.join(__dirname, 'styles');
 const bundlePath = path.join(path.join(__dirname, 'project-dist'), 'bundle.css');
@@ -27,15 +26,4 @@ fs.readdir(styleFolderPath, { withFileTypes: true }, (err, files) => {
     
   })
 
-
 });
-
-
-const bufArr = Buffer.from(arr)
-//console.log(arr)
-
-
-// fs.writeFile(bundlePath, arrayBuf, err => {
-//   if (err) throw err;
-//   console.log('Bingo')
-// })
